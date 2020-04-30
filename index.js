@@ -194,7 +194,7 @@ app.post('/addinv', (req, res) => {
 
 //GET STOCK
 app.get('/getstock', (req, res) => {
-    let sql = `SELECT i.inventory_id AS "No",p.nama as "Product", s.branch_name AS "Branch Name",i.inventory AS Stock 
+    let sql = `SELECT i.inventory_id AS "No",p.nama AS "Product", s.branch_name AS "Branch Name",i.inventory AS Stock 
     FROM inventory i
     JOIN store s ON i.store_id = s.store_id
     JOIN product p ON i.product_id=p.product_id`
